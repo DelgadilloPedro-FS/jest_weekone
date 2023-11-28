@@ -1,4 +1,5 @@
-const { add, subtract, multiply, divide } = require("./calculate");
+const { add, subtract, multiply, divide, sqrt, max } = require("./calculate");
+
 describe("testing the calculate module", () => {
   test("should add two number inputs", () => {
     expect(add(2, 3)).toBe(5);
@@ -11,5 +12,14 @@ describe("testing the calculate module", () => {
   });
   test("should divide two number inputs", () => {
     expect(divide(10, 2)).toBe(5);
+  });
+});
+
+describe("testing the advanced math module", () => {
+  test("should square root number input", () => {
+    expect(sqrt(25)).toBe(5);
+  });
+  test("should return bigger number input", () => {
+    expect(max(25, 100)).toBe(100);
   });
 });
